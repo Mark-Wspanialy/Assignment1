@@ -21,12 +21,23 @@ numbers_divisible = 0
 #Starts checking
 for i in range(number_one,number_two):
     #if it is divisible, print so
-    if i
-    if i%11 == 0 and i%12 == 0:
-        print(i, "is divisible by both 11 and 12!")
-        numbers_divisible = numbers_divisible + 1
+    if i>0:
+        if i%11 == 0 and i%12 == 0:
+            print(i, "is divisible by both 11 and 12!")
+            numbers_divisible = numbers_divisible + 1
+        else:
+            #Ignore non-divisible numbers
+            continue
+    elif i<0:
+        #If the number is negative divide by negative numbers
+        if i%-11 == 0 and i%-12 == 0:
+            print(i, "is divisible by both 11 and 12!")
+            numbers_divisible = numbers_divisible + 1
+        else:
+            #Ignore non-divisible numbers
+            continue
+    #If the number is 0 its non divisible
     else:
-        #Ignore non-divisible numbers
         continue
-#Prints total Numbers
+#Prints Total Numbers
 print(numbers_divisible, "number(s) were divisible by 11 and 12.")
